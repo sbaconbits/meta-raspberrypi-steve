@@ -1,0 +1,13 @@
+diff --git a/include/configs/rpi.h b/include/configs/rpi.h
+index cc555d9..2b5a98b 100644
+--- a/include/configs/rpi.h
++++ b/include/configs/rpi.h
+@@ -148,6 +148,8 @@
+ 	"scriptaddr=0x02000000\0" \
+ 	"ramdisk_addr_r=0x02100000\0" \
+ 
++#define CONFIG_BOOTCOMMAND "dhcp ${scriptaddr} 10.0.1.173:boot.src.uimg; source ${scriptaddr}"
++
+ #define BOOT_TARGET_DEVICES(func) \
+ 	func(MMC, mmc, 0) \
+ 	func(USB, usb, 0) \
