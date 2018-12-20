@@ -1,0 +1,19 @@
+diff --git a/include/configs/rpi.h b/include/configs/rpi.h
+index cab8661..cc555d9 100644
+--- a/include/configs/rpi.h
++++ b/include/configs/rpi.h
+@@ -76,11 +76,12 @@
+ #endif
+ 
+ /* Console UART */
+-#if defined (CONFIG_BCM2837) || defined(CONFIG_TARGET_RPI_0_W)
++/* #if defined (CONFIG_BCM2837) || defined(CONFIG_TARGET_RPI_0_W)
+ #define CONFIG_BCM283X_MU_SERIAL
+ #else
++*/
+ #define CONFIG_PL01X_SERIAL
+-#endif
++/* #endif */
+ 
+ /* Console configuration */
+ #define CONFIG_SYS_CBSIZE		1024
